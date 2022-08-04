@@ -17,7 +17,7 @@ class Role < ActiveRecord::Base
 
   def understudy
     if self.auditions.where(hired:true).second == nil
-      "no actor has been hired for understudy for this role"
+      "no actor has been hired for understudy for this role."
     else
       self.auditions.where(hired:true).second
     end
